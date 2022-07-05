@@ -4,7 +4,7 @@ const cors = require('cors');
 const { connectedDB } = require('./config/db');
 require('dotenv').config();
 
-const auth = require('./routes/auth');
+const authRoute = require('./routes/auth');
 
 
 const app = express();
@@ -20,7 +20,7 @@ app.use(express.urlencoded({extended:true, limit:"30mb"}));
 
 // const express = require('express');
 
-app.use('/api/user', auth)
+app.use('/api/user', authRoute)
 
 
 
